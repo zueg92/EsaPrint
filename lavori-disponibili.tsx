@@ -1,0 +1,1 @@
+import {useEffect,useState} from 'react'; import {View,Text} from 'react-native'; import {getOrders} from '../lib/orders'; export default function(){const[o,s]=useState([]); useEffect(()=>{getOrders().then(s)},[]); return <View><Text>Lavori Disponibili {o.length}</Text></View>}
